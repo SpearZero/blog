@@ -62,8 +62,8 @@ private String getAddress(String json) throws Exception {
         return value;
     }
     
-    JsonArray documnets = addrResult.getAsJsonArray("documents");
-    JsonObject addrObject = documnets.get(0).getAsJsonObject();
+    JsonArray documents = addrResult.getAsJsonArray("documents");
+    JsonObject addrObject = documents.get(0).getAsJsonObject();
     
     if (addrObject.get("road_address").isJsonNull()) {
         JsonObject address = addrObject.get("address").getAsJsonObject();
