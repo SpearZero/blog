@@ -76,4 +76,32 @@ private String getAddress(String json) throws Exception {
     return value;
 }
 ```
+자바스크립트(jquery AJAX)로 API 호출
 
+------------------------------------------------------------------------
+```
+var addressName = '';
+
+$.ajax({
+    type : 'get',
+    url : 'https://dapi.kakao.com/v2/local/geo/coord2address.json?input_coord=WGS84&x=12.12345&y=12.12345',
+    dataType : 'json',
+    async: false,
+    beforeSend : function(xhr) {
+        xhr.setRequestHeader("Authorization", "KakaoAK RESTAPI키")
+    },
+    success : function(result) {
+        var totatlCount = result.meta.total_count;
+        if (totatlCount > 0) {
+            if (result.documents[0].road_address === null) {
+                addressName = result.documents[0].address.address_name;
+            } else {
+                addressName = result.documents[0].road_address.address_name;
+            }
+        }
+    },
+    error:function(request, status, error) {
+        alert(error);
+    }
+})
+```
