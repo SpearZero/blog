@@ -19,8 +19,7 @@
 @Override
 public String coordToAddr(String lon, String lat) {
     /*
-        String url = https://dapi.kakao.com/v2/local/geo/coord2address.json? 
-            input_coord=WGS84&x=12.12345&y=12.12345
+        String url = https://dapi.kakao.com/v2/local/geo/coord2address.json?input_coord=WGS84&x=12.12345&y=12.12345
     */
     String url = APIURL.COORD_ADDR_URL + lon + "&y=" + lat;
     HttpEntity<?> entity = kakaoHeader();
