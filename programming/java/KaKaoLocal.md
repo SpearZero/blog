@@ -79,7 +79,6 @@ private String getAddress(String json) throws Exception {
 
 ------------------------------------------------------------------------
 ```
-var addressName = '';
 
 $.ajax({
     type : 'get',
@@ -90,7 +89,8 @@ $.ajax({
         xhr.setRequestHeader("Authorization", "KakaoAK RESTAPI키")
     },
     success : function(result) {
-        var totatlCount = result.meta.total_count;
+        let addressName = '';
+        let totatlCount = result.meta.total_count;
         if (totatlCount > 0) {
             if (result.documents[0].road_address === null) {
                 addressName = result.documents[0].address.address_name;
