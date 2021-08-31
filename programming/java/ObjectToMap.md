@@ -1,6 +1,6 @@
 ## Java Object를 Map으로 바꾸기
 
-Java Object를 Map으로 바꿔야 되는 일이 생겨서 인터넷을 찾아보던중 Jackson의 ObjectMapper에서 Object를<br> Map으로 변경시켜주는 메서드가 있다는것을 알게 되었다.
+Java Object를 Map으로 바꿔야 되는 일이 생겨서 인터넷을 찾아보던중 Jackson의 ObjectMapper에서 Object를 Map으로 변경시켜주는 메서드가 있다는것을 알게 되었다.
 
 ObjectMapper를 사용하기 위해 먼저 Jackson 라이브러리를 추가해야한다.
 

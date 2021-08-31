@@ -3,7 +3,7 @@
 제가 개발하면서 자주 사용할것같은 리눅스 명령어나 설정들을 모아놓은 페이지입니다.
 
 ### root 패스워드 초기화
-> https://bono915.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-root-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EB%B6%84%EC%8B%A4%EC%8B%9C-%EC%9E%AC%EC%84%A4%EC%A0%95-root-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EC%B4%88%EA%B8%B0%ED%99%94-%EB%B0%A9%EB%B2%95?category=710433
+https://bono915.tistory.com/entry/Linux-%EB%A6%AC%EB%88%85%EC%8A%A4-root-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EB%B6%84%EC%8B%A4%EC%8B%9C-%EC%9E%AC%EC%84%A4%EC%A0%95-root-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EC%B4%88%EA%B8%B0%ED%99%94-%EB%B0%A9%EB%B2%95?category=710433
 
 ### 아파치 서버 시작시 No such file or directory: AH02291: Cannot access directory 'etc/httpd/logs' for main error log 문구가 뜰 경우
 
@@ -48,7 +48,7 @@ vi /etc/sudoers
 ```
 nohup [실행하고자하는 프로그램] &
 
-# nohou.out에 로그 안남게 실행
+# nohup.out에 로그 안남게 실행
 nohup [실행하고자하는 프로그램] 1>/dev/null 2>&1 &
 ```
 
@@ -58,4 +58,21 @@ ps -ef
 
 # grep으로 단어를 포함하는 프로세스 찾기
 ps -ef | grep [단어]
+```
+
+### 디렉토리 압축후 windows에서 linux서버에 있는 압축파일 전송받기
+```
+# linux 서버
+tar -zcvf [파일명.tar.gz] [디렉토리]
+
+# 예시
+tar -zcvf abc.tar.gz /abc/abc
+```
+
+```
+# 윈도우 cmd 창
+scp [리눅스계정]@[서버주소]:[파일] [윈도우경로]
+
+# 예시 
+scp root@192.xxx.xxx.xxx:/abc/abc/abc.tar.gz C:\dev
 ```
