@@ -1,10 +1,6 @@
 ## Java Object를 Map으로 바꾸기
 
-<<<<<<< HEAD
-Java Object를 Map으로 바꿔야 되는 일이 생겨서 인터넷을 찾아보던중 Jackson의 ObjectMapper에서 Object를 Map으로 변경시켜주는 메서드가 있다는것을 알게 되었다.
-=======
 같이 프로젝트하는 프리랜서분이 Java Object를 Map으로 변환하는 기능을 만들어달라고 요청하셨다. 인터넷을 검색하던 중 [Apache Commons BeanUtils](https://commons.apache.org/proper/commons-beanutils/)을 이용하면 쉽게 변환할 수 있다고 해서 프로젝트 내부에서 찾아보니 Apache Commons BeanUtils 라이브러리를 찾을 수 없었다. 다른 방법을 찾던중 Jackson의 ObjectMapper를 이용하면 Java Object를 쉽게 Map 으로 변경할 수 있다는 것을 알게 되었다. 다행히 프로젝트 내부에서 Jackson 라이브러리를 찾을 수 있었고 Jackson의 ObjectMapper를 이용하여 기능을 만들었다.
->>>>>>> 6e6a3a14c596bfd79817f9f2d9d5db69a4c2718c
 
 ObjectMapper를 사용하기 위해 먼저 Jackson 라이브러리를 추가해야한다.
 ```
