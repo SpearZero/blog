@@ -39,7 +39,7 @@ public boolean setWritable(boolean writable, boolean ownerOnly)
 소유자 또는 모두에게 경로에 대한 쓰기 권한을 설정한다. writable이 true인 경우 쓰기 권한을 허용한다. ownerOnly가 false인 경우 모두에게 쓰기를 허용한다.
 ```
 
-setRedable, setExecutable, setWritable 메서드는 직관적이지가 않습니다(true, false 등으로 권한을 설정하므로). 자바 버전 7 이상부터는 [java.nio.file.attribute.PosixFileAttributes](https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/PosixFileAttributes.html)를 이용해서 직관적으로 권한을 설정할 수 있습니다.
+setRedable, setExecutable, setWritable 메서드는 직관적이지가 않습니다(true, false 등으로 권한을 설정하므로). 자바 버전 7 이상부터는 직관적이면서 더 많은 옵션을 제공하는 [java.nio.file.attribute.PosixFileAttributes](https://docs.oracle.com/javase/8/docs/api/java/nio/file/attribute/PosixFileAttributes.html)를 이용해서 권한을 설정할 수 있습니다.
 
 ---
 
