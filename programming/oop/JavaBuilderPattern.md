@@ -153,3 +153,9 @@ Book book = new Book.Builder("xxx-xx-xxxx-xxx-x", "book")
 
 단점
 - 코드가 많아진다.
+
+---
+
+참고
+
+- [EFFECTIVE JAVA 3/E](https://book.naver.com/bookdb/book_detail.nhn?bid=14097515)
